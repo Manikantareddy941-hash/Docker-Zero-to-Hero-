@@ -1,58 +1,189 @@
-# Docker Commands
+Here’s the **same complete Docker command list**, now organized with clear **titles + emojis** so it’s easier to remember 👇
 
-Some of the most commonly used docker commands are 
+---
 
-### docker images
+# 🧾 Docker Basics & Info
 
-Lists docker images on the host machine.
+docker --version — we use it to check the installed Docker version
 
-### docker build
+docker info — we use it to display system-wide Docker information
 
-Builds image from Dockerfile.
+docker help — we use it to list all Docker commands
 
-### docker run
+---
 
-Runs a Docker container. 
+# 📦 Image Management
 
-There are many arguments which you can pass to this command for example,
+docker pull image_name — we use it to download an image from Docker Hub
 
-`docker run -d` -> Run container in background and print container ID
-`docker run -p` -> Port mapping
+docker push image_name — we use it to upload an image to a registry
 
-use `docker run --help` to look into more arguments.
+docker search image_name — we use it to search images in Docker Hub
 
-### docker ps
+docker images — we use it to list all local images
 
-Lists running containers on the host machine.
+docker image ls — we use it to list images (new syntax)
 
-### docker stop
+docker rmi image_id — we use it to remove an image
 
-Stops running container.
+docker image prune — we use it to remove unused images
 
-### docker start
+---
 
-Starts a stopped container.
+# 🏗️ Image Building
 
-### docker rm
+docker build -t image_name . — we use it to build an image from a Dockerfile
 
-Removes a stopped container.
+docker build -f Dockerfile.dev -t image_name . — we use it to build using a specific Dockerfile
 
-### docker rmi
+docker history image_name — we use it to view image layers
 
-Removes an image from the host machine.
+docker inspect image_name — we use it to view detailed image info
 
-### docker pull
+---
 
-Downloads an image from the configured registry.
+# 🚀 Container Run & Creation
 
-### docker push
+docker run image_name — we use it to create and start a container
 
-Uploads an image to the configured registry.
+docker run -d image_name — we use it to run container in detached mode
 
-### docker exec
+docker run -it image_name /bin/bash — we use it to run an interactive container
 
-Run a command in a running container.
+docker run -p 8080:80 image_name — we use it to map ports
 
-### docker network
+docker run --name container_name image_name — we use it to assign a container name
 
-Manage Docker networks such as creating and removing networks, and connecting containers to networks.
+docker run -v host_path:container_path image_name — we use it to mount volumes
+
+docker run --env VAR=value image_name — we use it to pass environment variables
+
+docker run --restart always image_name — we use it to set restart policy
+
+---
+
+# 📊 Container Lifecycle
+
+docker ps — we use it to list running containers
+
+docker ps -a — we use it to list all containers
+
+docker start container_id — we use it to start a stopped container
+
+docker stop container_id — we use it to stop a container
+
+docker restart container_id — we use it to restart a container
+
+docker pause container_id — we use it to pause a container
+
+docker unpause container_id — we use it to resume a container
+
+docker rm container_id — we use it to remove a container
+
+docker container prune — we use it to remove all stopped containers
+
+---
+
+# 🔍 Container Inspection & Monitoring
+
+docker exec -it container_id /bin/bash — we use it to access container shell
+
+docker logs container_id — we use it to view container logs
+
+docker logs -f container_id — we use it to follow logs live
+
+docker attach container_id — we use it to attach terminal to container
+
+docker top container_id — we use it to view running processes
+
+docker stats — we use it to monitor container resource usage
+
+docker inspect container_id — we use it to view detailed container info
+
+---
+
+# 🌐 Network Management
+
+docker network ls — we use it to list networks
+
+docker network create network_name — we use it to create a network
+
+docker network inspect network_name — we use it to inspect a network
+
+docker network rm network_name — we use it to delete a network
+
+docker network connect network_name container — we use it to connect container to network
+
+docker network disconnect network_name container — we use it to disconnect container
+
+---
+
+# 💾 Volume Management
+
+docker volume ls — we use it to list volumes
+
+docker volume create volume_name — we use it to create a volume
+
+docker volume inspect volume_name — we use it to inspect volume
+
+docker volume rm volume_name — we use it to remove a volume
+
+docker volume prune — we use it to remove unused volumes
+
+---
+
+# 🔐 Registry & Image Transfer
+
+docker login — we use it to authenticate to a registry
+
+docker logout — we use it to log out from a registry
+
+docker tag image_name repo/image_name — we use it to tag an image
+
+docker save image_name -o file.tar — we use it to export an image
+
+docker load -i file.tar — we use it to import an image
+
+---
+
+# 🧹 System Cleanup & Diagnostics
+
+docker system df — we use it to view disk usage
+
+docker system prune — we use it to clean unused data
+
+docker system prune -a — we use it to remove all unused images and containers
+
+docker events — we use it to view Docker events in real time
+
+---
+
+# 🧩 Docker Compose
+
+docker compose version — we use it to check compose version
+
+docker compose up — we use it to create and start services
+
+docker compose up -d — we use it to run services in background
+
+docker compose down — we use it to stop and remove services
+
+docker compose ps — we use it to list compose containers
+
+docker compose logs — we use it to view logs
+
+docker compose build — we use it to build services
+
+docker compose restart — we use it to restart services
+
+docker compose exec service_name bash — we use it to access a service
+
+---
+
+If you want, I can now:
+
+✅ Highlight the **top 20 most important commands** (so you don’t memorize everything)
+✅ Make a **study sheet PDF style**
+✅ Give **practice scenarios**
+
+Tell me which 👍
