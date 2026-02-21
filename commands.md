@@ -1,4 +1,4 @@
-Here’s the **same complete Docker command list**, now organized with clear **titles + emojis** so it’s easier to remember 👇
+Here’s the **same complete Docker command list**, organized, so it’s easier to remember 👇
 
 ---
 
@@ -179,11 +179,3 @@ docker compose restart — we use it to restart services
 docker compose exec service_name bash — we use it to access a service
 
 ---
-
-If you want, I can now:
-
-✅ Highlight the **top 20 most important commands** (so you don’t memorize everything)
-✅ Make a **study sheet PDF style**
-✅ Give **practice scenarios**
-
-Tell me which 👍
